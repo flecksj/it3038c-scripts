@@ -6,7 +6,7 @@ function getIP {
 (Get-NetIPAddress).IPv4Address | Select-String "192*"
 }
 function GetVersion {
-(Get-Host) | Select-Oject Version
+(Get-Host) | Select-Object Version
 }
 function GetDate {
 (Get-Date -Format "dddd MM/dd/yyyy HH:mm K")
@@ -15,7 +15,7 @@ write-host(getIP)
 $Version=GetVersion
 $IP=getIP
 $Date =GetDate
-$Body = "This machine's IP is $IP. User is $env:username. Hostname is $. Powershell Version $HOST.Version.Major. Today's date is $Date"
+$Body = "This machine's IP is $IP. User is $env:username. Hostname is $env:COMPUTERNAME. Powershell Version $Version. Today's date is $Date"
 
 write-host($Body)
  
