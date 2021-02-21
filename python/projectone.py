@@ -1,4 +1,4 @@
 import datetime
-now = datetime.datetime.now()
+time = datetime.datetime.now()
 print ("Current date and time : ")
-print (now.strftime("%Y-%m-%d %H:%M:%S"))
+print (time.strftime("%Y-%B-%d %H:%M:%S:%f"))
