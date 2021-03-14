@@ -1,15 +1,14 @@
-# importing the module
 from pytube import YouTube
 
 # where to save
-SAVE_PATH = "E:/" #to_do
+SAVE_PATH = "C:/Users/Sam Fleck/PycharmProjects/pythonProject"
 
-# link of the video to be downloaded
-link="https://www.youtube.com/watch?v=T_sPdgJfhaM"
+
+link = input("Enter the link of YouTube video you want to download:  ")
 
 from pytube import YouTube
 
-youtube_video_url = 'https://www.youtube.com/watch?v=T_sPdgJfhaM'
+youtube_video_url = link
 
 try:
     yt_obj = YouTube(youtube_video_url)
